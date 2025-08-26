@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tomiwa | Portfolio</title>
+  <style>
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: linear-gradient(135deg, #e0e7ff 0%, #f0f4ff 100%);
+      color: #232946;
+      min-height: 100vh;
+      transition: background 0.7s;
+    }
+
+
+    header {
+      background: linear-gradient(90deg, #6a82fb 0%, #fc5c7d 100%);
+      color: #fff;
+      padding: 2.5rem 2rem 2rem 2rem;
+      text-align: center;
+      box-shadow: 0 4px 24px rgba(106,130,251,0.08);
+      animation: fadeInDown 1.2s cubic-bezier(.77,0,.18,1) 0.1s both;
+    }
+
+
+    header h1 {
+      margin: 0;
+      font-size: 2.7rem;
+      letter-spacing: 2px;
+      font-weight: 700;
+      text-shadow: 0 2px 8px rgba(106,130,251,0.12);
+      animation: fadeIn 1.2s cubic-bezier(.77,0,.18,1) 0.2s both;
+    }
+
+
+    header p {
+      margin: 0.5rem 0;
+      font-size: 1.2rem;
+      font-weight: 500;
+      opacity: 0.95;
+      animation: fadeIn 1.2s cubic-bezier(.77,0,.18,1) 0.3s both;
+    }
+
+    nav {
+      margin-top: 1rem;
+    }
+
+
+    nav a {
+      color: #fff;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      position: relative;
+      transition: color 0.3s;
+    }
+    nav a::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 2px;
+      background: #fff;
+      transition: width 0.3s;
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+    }
+    nav a:hover {
+      color: #ffe6fa;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+
+
+    section {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+      background: rgba(255,255,255,0.85);
+      border-radius: 18px;
+      box-shadow: 0 2px 16px rgba(106,130,251,0.07);
+      margin-bottom: 2rem;
+      animation: fadeInUp 1.2s cubic-bezier(.77,0,.18,1) 0.4s both;
+    }
+
+
+    h2 {
+      color: #6a82fb;
+      margin-bottom: 1rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      margin-bottom: 0.8rem;
+    }
+
+
+    .project-card {
+      background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+      padding: 1.2rem;
+      margin-bottom: 1.2rem;
+      border-left: 4px solid #6a82fb;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(140, 130, 251, 0.10);
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: fadeInUp 1.2s cubic-bezier(.77,0,.18,1) 0.5s both;
+    }
+    .project-card:hover {
+      transform: translateY(-6px) scale(1.03);
+      box-shadow: 0 8px 32px rgba(140, 130, 251, 0.18);
+    }
+
+    .project-card h3 {
+      margin-top: 0;
+    }
+
+
+    .project-card a {
+      color: #232946;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    .project-card a:hover {
+      color: #fc5c7d;
+      text-decoration: underline;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    form label {
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+
+    form input, form textarea {
+      padding: 0.5rem;
+      margin-top: 0.3rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    form button {
+      margin-top: 1rem;
+      padding: 0.7rem;
+      background-color: #007acc;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+
+    footer {
+      text-align: center;
+      padding: 1.2rem;
+      background: linear-gradient(90deg, #8ec5fc 0%, #e0c3fc 100%);
+      font-size: 1rem;
+      color: #232946;
+      border-top-left-radius: 18px;
+      border-top-right-radius: 18px;
+      box-shadow: 0 -2px 12px rgba(140, 130, 251, 0.07);
+    }
+
+    #github a {
+      color: #6a82fb;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    #github a:hover {
+      color: #fc5c7d;
+      text-decoration: underline;
+    }
+
+    #github a:hover {
+      text-decoration: underline;
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    /* Profile Pic Animation */
+    #profile-pic img {
+      animation: fadeIn 1.5s cubic-bezier(.77,0,.18,1) 0.6s both, profilePop 1.2s cubic-bezier(.77,0,.18,1) 0.7s both;
+    }
+    @keyframes profilePop {
+      0% { transform: scale(0.7) rotate(-10deg); box-shadow: 0 0 0 rgba(140,130,251,0); }
+      80% { transform: scale(1.08) rotate(2deg); box-shadow: 0 8px 32px rgba(140,130,251,0.18); }
+      100% { transform: scale(1) rotate(0); box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    }
+
+    /* 🔧 Mobile Responsiveness */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      header p {
+        font-size: 1rem;
+      }
+
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      nav a {
+        margin: 0.5rem;
+        font-size: 0.9rem;
+      }
+
+      section {
+        padding: 1rem;
+      }
+
+      form input, form textarea {
+        font-size: 1rem;
+      }
+
+      .project-card {
+        padding: 1rem;
+      }
+    }
+
+    /* Dark Mode Styles */
+    body.dark-mode {
+      background: linear-gradient(135deg, #181c2f 0%, #232946 100%) !important;
+      color: #f4f4f4 !important;
+    }
+    body.dark-mode header {
+      background: linear-gradient(90deg, #232946 0%, #181c2f 100%) !important;
+      color: #fff !important;
+    }
+    body.dark-mode section {
+      background: rgba(35,41,70,0.92) !important;
+      color: #f4f4f4 !important;
+      box-shadow: 0 2px 16px rgba(24,28,47,0.18) !important;
+    }
+    body.dark-mode .project-card {
+      background: linear-gradient(120deg, #232946 0%, #181c2f 100%) !important;
+      color: #f4f4f4 !important;
+      border-left: 4px solid #fc5c7d !important;
+    }
+    body.dark-mode .project-card a {
+      color: #8ec5fc !important;
+    }
+    body.dark-mode .project-card a:hover {
+      color: #fc5c7d !important;
+    }
+    body.dark-mode footer {
+      background: linear-gradient(90deg, #232946 0%, #181c2f 100%) !important;
+      color: #f4f4f4 !important;
+    }
+    body.dark-mode #profile-pic img {
+      border-color: #fc5c7d !important;
+    }
+    body.dark-mode #darkModeToggle {
+      background: #fc5c7d !important;
+      color: #232946 !important;
+    }
+  </style>
+</head>
+<body>
+
+    <header>
+      <div class="animated-name" id="animatedName"></div>
+      <h1>Youngemeritus</h1>
+      <p>Creative Technologist | Backend Deverloper</p>
+  <style>
+    .animated-name {
+      font-size: clamp(1.2rem, 6vw, 2.2rem);
+      font-weight: 800;
+      letter-spacing: 2.5px;
+      color: #fc5c7d;
+      margin-bottom: 0.5rem;
+      min-height: 2.5rem;
+      text-shadow: 0 2px 8px rgba(252,92,125,0.10);
+      white-space: pre-wrap;
+      overflow: hidden;
+      border-right: 3px solid #fc5c7d;
+      width: 100%;
+      max-width: 95vw;
+      margin-left: auto;
+      margin-right: auto;
+      animation: blink-caret 0.8s step-end infinite alternate;
+      box-sizing: border-box;
+      word-break: break-word;
+      text-align: center;
+    }
+    @keyframes blink-caret {
+      from, to { border-color: transparent; }
+      50% { border-color: #fc5c7d; }
+    }
+    @media (max-width: 600px) {
+      .animated-name {
+        font-size: clamp(1rem, 8vw, 1.3rem);
+        min-height: 1.5rem;
+        padding-left: 0.2rem;
+        padding-right: 0.2rem;
+      }
+    }
+  </style>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#github">GitHub</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Profile Picture & Socials Section -->
+    <section id="profile-pic" style="display: flex; flex-direction: column; align-items: center; margin-top: -2rem; margin-bottom: 1rem;">
+      <img src="profile.png" alt="Profile Picture" style="width: 140px; height: 140px; object-fit: cover; border-radius: 50%; border: 4px solid #007acc; box-shadow: 0 2px 8px rgba(0,0,0,0.08); background: #fff;" />
+      <div style="margin-top: 1.2rem; display: flex; gap: 1.2rem; justify-content: center;">
+        <a href="www.linkedin.com/in/
+youngemeritus" target="_blank" title="LinkedIn" style="color:#0a66c2;font-size:2rem;"><svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.604c0-1.337-.026-3.063-1.868-3.063-1.868 0-2.154 1.459-2.154 2.967v5.7h-3v-10h2.881v1.367h.041c.401-.761 1.381-1.563 2.841-1.563 3.039 0 3.6 2.001 3.6 4.601v5.595z"/></svg></a>
+        <a href="https://x.com/TomiwaSobalaje" target="_blank" title="Twitter" style="color:#1da1f2;font-size:2rem;"><svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557a9.93 9.93 0 0 1-2.828.775 4.932 4.932 0 0 0 2.165-2.724c-.951.564-2.005.974-3.127 1.195a4.92 4.92 0 0 0-8.384 4.482c-4.086-.205-7.713-2.164-10.141-5.144a4.822 4.822 0 0 0-.664 2.475c0 1.708.87 3.216 2.188 4.099a4.904 4.904 0 0 1-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.936 4.936 0 0 1-2.224.084c.627 1.956 2.444 3.377 4.6 3.417a9.867 9.867 0 0 1-6.102 2.104c-.396 0-.787-.023-1.175-.069a13.945 13.945 0 0 0 7.548 2.212c9.057 0 14.009-7.513 14.009-14.009 0-.213-.005-.425-.014-.636a10.012 10.012 0 0 0 2.457-2.548z"/></svg></a>
+        <a href="https://github.com/tommy0914" target="_blank" title="GitHub" style="color:#232946;font-size:2rem;"><svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.416-4.042-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.605-2.665-.305-5.466-1.334-5.466-5.931 0-1.31.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23a11.52 11.52 0 0 1 3.003-.404c1.018.005 2.045.138 3.003.404 2.291-1.553 3.297-1.23 3.297-1.23.653 1.653.242 2.873.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.803 5.624-5.475 5.921.43.372.823 1.102.823 2.222 0 1.606-.014 2.898-.014 3.293 0 .322.216.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+      </div>
+      <a href="resume.pdf" download style="margin-top:1.5rem;display:inline-block;padding:0.7rem 1.5rem;background:#6a82fb;color:#fff;border-radius:6px;font-weight:600;text-decoration:none;box-shadow:0 2px 8px rgba(106,130,251,0.10);transition:background 0.3s;">Download Resume</a>
+    </section>
+
+  <section id="about">
+  <h2>About Me</h2>
+  <p>
+    I'm Tomiwa, a backend developer with a passion for building scalable, secure, and efficient systems. I specialize in Node.js, Express.js, and SQL, and I love crafting APIs that power dynamic web applications. I deployed full-stack solutions with React, I bring precision and performance to every project.
+  </p>
+</section>
+
+
+  <section id="skills">
+  <h2>Skills</h2>
+  <ul>
+    <li><strong>Languages:</strong> JavaScript (ES6+), HTML, CSS, SQL</li>
+    <li><strong>Backend:</strong> Node.js, Express.js, REST APIs, JWT, MongoDB</li>
+    <li><strong>Frontend:</strong> React.js, JSX, Hooks</li>
+    <li><strong>Tools:</strong> Git, GitHub, Postman, Firebase, VS Code</li>
+    <li><strong>Soft Skills:</strong> Debugging, Collaboration, System Design</li>
+  </ul>
+</section>
+
+  <section id="projects">
+    <h2>Featured Projects</h2>
+
+
+    <div class="project-card">
+      <img src="question.png" alt="Question Bank Screenshot" style="width:100%;max-width:320px;border-radius:8px;margin-bottom:0.7rem;box-shadow:0 2px 8px rgba(106,130,251,0.10);" />
+      <h3>Question Bank</h3>
+      <p><strong>Tech:</strong> JavaScript, HTML, CSS</p>
+      <p>A JavaScript-based tool for managing and displaying questions dynamically.</p>
+      <a href="https://github.com/tommy0914/questionbank" target="_blank">🔗 View on GitHub</a>
+    </div>
+
+    <div class="project-card">
+      <img src="temerature.png" alt="Temperature Converter Screenshot" style="width:100%;max-width:320px;border-radius:8px;margin-bottom:0.7rem;box-shadow:0 2px 8px rgba(106,130,251,0.10);" />
+      <h3>Temperature Converter</h3>
+      <p><strong>Tech:</strong> HTML, CSS, JavaScript</p>
+      <p>Simple HTML app to convert temperature between units.</p>
+      <a href="https://github.com/tommy0914/temprature" target="_blank">🔗 View on GitHub</a>
+    </div>
+  </section>
+
+  <section id="github">
+    <h2>GitHub Highlights</h2>
+    <p>
+      I actively share my work and experiments on GitHub. From RFID systems to web tools, my repositories reflect my journey as a creative technologist.
+    </p>
+    <ul>
+      <li><a href="https://github.com/tommy0914/questionbank" target="_blank">📁 Question Bank</a> – Dynamic question manager using JavaScript and HTML.</li>
+      <li><a href="https://github.com/tommy0914/temprature" target="_blank">🌡️ Temperature Converter</a> – Simple tool to convert temperature units.</li>
+      <li><a href="https://github.com/tommy0914/result" target="_blank">📊 Result Viewer</a> – Lightweight HTML-based result display system.</li>
+      <li><a href="https://github.com/tommy0914" target="_blank">🔗 View All Repositories</a> – Explore all my public projects and contributions.</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form id="contactForm" action="https://formspree.io/f/mvgbobzv" method="POST">
+      <label for="name">Your Name</label>
+      <input type="text" name="name" id="name" placeholder="Your Name" required />
+
+      <label for="email">Your Email</label>
+      <input type="email" name="email" id="email" placeholder="Your Email" required />
+
+      <label for="message">Your Message</label>
+      <textarea name="message" id="message" placeholder="Your Message" required></textarea>
+
+      <button type="submit">Send</button>
+      <div id="formSuccess" style="display:none;color:#28a745;margin-top:1rem;font-weight:bold;">Thank you! Your message has been sent.</div>
+    </form>
+    <script>
+      // Replace 'yourformid' with your real Formspree form ID after registering
+      document.getElementById('contactForm').addEventListener('submit', function(e) {
+        var form = this;
+        e.preventDefault();
+        fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        }).then(function(response) {
+          if (response.ok) {
+            document.getElementById('formSuccess').style.display = 'block';
+            form.reset();
+          } else {
+            alert('There was a problem sending your message. Please try again.');
+          }
+        }).catch(function() {
+          alert('There was a problem sending your message. Please try again.');
+        });
+      });
+    </script>
+  </section>
+
+  <footer>
+    <button id="darkModeToggle" style="margin-bottom:1rem;padding:0.5rem 1.2rem;border-radius:6px;border:none;background:#232946;color:#fff;font-weight:600;cursor:pointer;transition:background 0.3s;">Toggle Dark Mode</button>
+    <p>© 2025 Tomiwa. Built with ❤️</p>
+  </footer>
+<script>
+// Typewriter animation for SOBALAJE TOMIWA
+const nameText = 'SOBALAJE TOMIWA';
+const animatedName = document.getElementById('animatedName');
+let i = 0;
+function typeWriter() {
+  if (i <= nameText.length) {
+    animatedName.textContent = nameText.slice(0, i);
+    i++;
+    setTimeout(typeWriter, 120);
+  }
+}
+if (animatedName) typeWriter();
+
+// Dark mode toggle
+const darkModeToggle = document.getElementById('darkModeToggle');
+darkModeToggle.addEventListener('click', function() {
+  document.body.classList.toggle('dark-mode');
+  localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+});
+// On load, check localStorage
+if (localStorage.getItem('darkMode') === 'true') {
+  document.body.classList.add('dark-mode');
+}
+</script>
+</body>
+</html>
