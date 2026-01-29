@@ -138,6 +138,44 @@
       text-decoration: underline;
     }
 
+    .blog-post {
+      background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+      padding: 1.2rem;
+      margin-bottom: 1.2rem;
+      border-left: 4px solid #6a82fb;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(140, 130, 251, 0.10);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .blog-post:hover {
+      transform: translateY(-6px) scale(1.03);
+      box-shadow: 0 8px 32px rgba(140, 130, 251, 0.18);
+    }
+
+    .blog-post h3 {
+      margin-top: 0;
+    }
+
+    .blog-post .post-meta {
+      font-size: 0.9rem;
+      font-style: italic;
+      color: #232946;
+      margin-bottom: 0.5rem;
+    }
+
+    .blog-post .read-more {
+      color: #232946;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    .blog-post .read-more:hover {
+      color: #fc5c7d;
+      text-decoration: underline;
+    }
+
     form {
       display: flex;
       flex-direction: column;
@@ -332,6 +370,7 @@
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
+        <a href="#blog">Blog</a>
         <a href="#github">GitHub</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -371,6 +410,13 @@ youngemeritus" target="_blank" title="LinkedIn" style="color:#0a66c2;font-size:2
   <section id="projects">
     <h2>Featured Projects</h2>
 
+    <div class="project-card">
+      <img src="resume-builder.png" alt="Resume Builder Screenshot" style="width:100%;max-width:320px;border-radius:8px;margin-bottom:0.7rem;box-shadow:0 2px 8px rgba(106,130,251,0.10);" />
+      <h3>Resume Builder</h3>
+      <p><strong>Tech:</strong> JavaScript, HTML, CSS</p>
+      <p>A simple and interactive resume builder that allows users to create and customize their resumes on the fly.</p>
+      <a href="https://github.com/tommy0914/resume-builder" target="_blank">🔗 View on GitHub</a>
+    </div>
 
     <div class="project-card">
       <img src="question.png" alt="Question Bank Screenshot" style="width:100%;max-width:320px;border-radius:8px;margin-bottom:0.7rem;box-shadow:0 2px 8px rgba(106,130,251,0.10);" />
@@ -389,12 +435,31 @@ youngemeritus" target="_blank" title="LinkedIn" style="color:#0a66c2;font-size:2
     </div>
   </section>
 
+  <section id="blog">
+    <h2>My Blog</h2>
+    <div class="blog-posts">
+      <article class="blog-post">
+        <h3>My First Blog Post</h3>
+        <p class="post-meta">Published on January 29, 2026</p>
+        <p>This is the content of my first blog post. I can write about my projects, my learning journey, or anything else I'm passionate about.</p>
+        <a href="#" class="read-more">Read More</a>
+      </article>
+      <article class="blog-post">
+        <h3>Another Blog Post</h3>
+        <p class="post-meta">Published on January 30, 2026</p>
+        <p>This is another blog post where I can share more of my thoughts and experiences.</p>
+        <a href="#" class="read-more">Read More</a>
+      </article>
+    </div>
+  </section>
+
   <section id="github">
     <h2>GitHub Highlights</h2>
     <p>
       I actively share my work and experiments on GitHub. From RFID systems to web tools, my repositories reflect my journey as a creative technologist.
     </p>
     <ul>
+      <li><a href="https://github.com/tommy0914/resume-builder" target="_blank">📁 Resume Builder</a> – Create and customize your resume with ease.</li>
       <li><a href="https://github.com/tommy0914/questionbank" target="_blank">📁 Question Bank</a> – Dynamic question manager using JavaScript and HTML.</li>
       <li><a href="https://github.com/tommy0914/temprature" target="_blank">🌡️ Temperature Converter</a> – Simple tool to convert temperature units.</li>
       <li><a href="https://github.com/tommy0914/result" target="_blank">📊 Result Viewer</a> – Lightweight HTML-based result display system.</li>
