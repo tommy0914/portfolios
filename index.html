@@ -523,6 +523,17 @@ function typeWriter() {
 }
 if (animatedName) typeWriter();
 
+  // Replace the URL below with your actual Lambda Function URL
+  const functionURL = "https://roia632ypibmld4gexlfg7urpi0bdvyb.lambda-url.us-east-1.on.aws/views";
+
+  fetch(functionURL)
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById("view-count").innerText = data.views;
+    })
+    .catch(error => console.error("Error fetching views:", error));
+
+
 // Dark mode toggle
 const darkModeToggle = document.getElementById('darkModeToggle');
 darkModeToggle.addEventListener('click', function() {
