@@ -1,55 +1,60 @@
-# 🧑‍💻 Tomiwa's Developer Portfolio
+# 🚀 Tomiwa Sobalaje (Youngemeritus) — Developer Portfolio
 
-Welcome to my personal portfolio — a showcase of my work as a backend developer with a passion for building scalable systems and smart integrations. This site highlights my projects, skills, and GitHub contributions.
+Welcome to my personal developer portfolio. This site showcases my work as a **Full-Stack & Backend Systems Engineer**, highlighting production platforms, architecture principles, technical case studies, and engineering capabilities.
 
-## 🚀 Live Site
-
-Check it out on Vercel: [portfolios-kappa-liard.vercel.app](portfolios-kappa-liard.vercel.app)
-
-## 🛠️ Tech Stack
-
-- **Frontend:** HTML, CSS, JavaScript, React
-- **Backend:** Node.js, Express.js
-- **Database:** SQL, MongoDB (project-dependent)
-- **Deployment:** GitHub + Vercel
-
-## 📁 Featured Projects
-
+**Live Deployment:** [portfolios-kappa-liard.vercel.app](https://portfolios-kappa-liard.vercel.app)  
+**Primary Domain / Vercel:** [youngemeritus.vercel.app](https://youngemeritus.vercel.app)
 
 ---
 
-### 📚 Question Bank
-A JavaScript-based tool for managing and displaying questions dynamically. Designed for educational platforms.
+## 🛠️ Core Engineering Stack
 
-**Repo:** [View Project](https://github.com/tommy0914/questionbank)
-
-![Question Bank Preview](images/question-bank.png)
-
----
-
-### 🌡️ Temperature Converter
-Simple HTML/CSS/JS app to convert temperature between Celsius and Fahrenheit.
-
-**Repo:** [View Project](https://github.com/tommy0914/temprature)
-
-![Temperature Converter Preview](images/temperature-converter.png)
+- **Backend & Cloud:** Node.js, NestJS, TypeScript, Express.js, RESTful APIs, AWS Lambda, Serverless, JWT Auth, Microservices.
+- **Databases & ORMs:** PostgreSQL, Prisma ORM, MySQL, MongoDB, Supabase.
+- **Frontend & UI:** React, Next.js 16, TypeScript, Tailwind CSS, Responsive Design, State Machines.
+- **DevOps & Tooling:** Git & GitHub Workflows, Vercel, Render, Postman, Linux / Bash.
 
 ---
 
-## 📬 Contact
+## 📁 Featured Flagship Projects
 
-Feel free to reach out or connect:
+### 1. 🎓 [CBT Zoe — Educational Testing & Examination Platform](https://github.com/tommy0914/cbt-zoe)
+A high-concurrency Computer-Based Testing engine engineered for academic institutions.
+- **Key Features:** Distraction-free candidate examination interface, persistent countdown timers with auto-submit state machine, dynamic CORS security validator supporting preview/production environments, and full administrative analytics dashboards.
+- **Tech Stack:** NestJS, TypeScript, React, Tailwind CSS, PostgreSQL, JWT.
 
-- GitHub: [@tommy0914](https://github.com/tommy0914)
-- LinkedIn: [Your LinkedIn Profile](#)
-- Email: sobalajetomiwa@gmail.com
+### 2. 📱 [YoungEmeritus Phones Store](https://youngemeritus.vercel.app)
+E-commerce platform and hardware classification engine for UK-used iPhones.
+- **Key Features:** Device grading system (Grade A/B/C), battery health % metrics, dual-currency checkout (Stripe GBP & Paystack NGN), and administrative catalog management.
+- **Tech Stack:** Next.js 16, React 19, Prisma ORM, PostgreSQL, Tailwind CSS 4.
+- **Repo:** [github.com/tommy0914/youngemeritus](https://github.com/tommy0914/youngemeritus)
+
+### 3. 📊 [School Report Card & Grade Analytics System](https://github.com/tommy0914/report-card)
+Automated terminal report card generator and student academic performance engine.
+- **Tech Stack:** Node.js, Express, PostgreSQL, REST APIs.
+
+### 4. ⛪ [Church Attendance & Congregation Registry](https://github.com/tommy0914/church-attendance)
+Member portal and service check-in tracker with real-time attendance trends and analytics.
+- **Tech Stack:** Node.js, Express, MongoDB.
+
+### 5. 📚 [Dynamic Question Bank Suite](https://github.com/tommy0914/questionbank)
+Modular question authoring tool supporting diverse assessment formats with instant answer evaluation.
 
 ---
 
-## 📌 About Me
+## 🎨 Design & Performance Architecture
 
-I'm Tomiwa, a backend developer based in Nigeria. I specialize in building APIs, integrating hardware systems, and deploying full-stack applications. I love solving real-world problems with clean code and thoughtful architecture.
+- **Theme Engine:** Dark/Light mode with local persistence and zero-flicker load.
+- **Bento Grid Layout:** Responsive cards with interactive category filtering.
+- **Real-Time Analytics:** Safe AWS Lambda pageviews integration with resilient fallback.
+- **Direct Formspree Integration:** Asynchronous contact pipeline with real-time validation and feedback.
+- **Performance:** Zero bloated runtime dependencies; pure semantic HTML, modern CSS variables, and native JavaScript.
 
 ---
 
-> Built with ❤️ and deployed via [Vercel](https://vercel.com)
+## 📬 Connect With Me
+
+- **Email:** [sobalajetomiwa@gmail.com](mailto:sobalajetomiwa@gmail.com)
+- **LinkedIn:** [linkedin.com/in/youngemeritus](https://www.linkedin.com/in/youngemeritus)
+- **GitHub:** [@tommy0914](https://github.com/tommy0914)
+- **Twitter / X:** [@TomiwaSobalaje](https://x.com/TomiwaSobalaje)
