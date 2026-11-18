@@ -1136,14 +1136,12 @@
       background: rgba(52, 211, 153, 0.15);
       border: 1px solid rgba(52, 211, 153, 0.3);
       color: var(--accent-emerald);
-      display: block;
     }
 
     .form-feedback.error {
       background: rgba(239, 68, 68, 0.15);
       border: 1px solid rgba(239, 68, 68, 0.3);
       color: #f87171;
-      display: block;
     }
 
     /* Footer */
@@ -1909,10 +1907,10 @@
                 <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
               </button>
 
-              <div id="formSuccessMessage" class="form-feedback success">
+              <div id="formSuccessMessage" class="form-feedback success" style="display: none;">
                 ✓ Thank you! Your message has been dispatched successfully. I will get back to you shortly.
               </div>
-              <div id="formErrorMessage" class="form-feedback error">
+              <div id="formErrorMessage" class="form-feedback error" style="display: none;">
                 ✕ There was an issue delivering your message. Please try again or email directly to sobalajetomiwa@gmail.com.
               </div>
             </form>
